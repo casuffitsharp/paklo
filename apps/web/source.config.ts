@@ -4,7 +4,7 @@ import {
   remarkMdxMermaid,
   remarkSteps,
 } from 'fumadocs-core/mdx-plugins';
-import { defineCollections, defineConfig, defineDocs, metaSchema } from 'fumadocs-mdx/config';
+import { defineCollections, defineConfig, defineDocs, frontmatterSchema, metaSchema } from 'fumadocs-mdx/config';
 import lastModified from 'fumadocs-mdx/plugins/last-modified';
 import remarkDirective from 'remark-directive';
 import remarkEmoji from 'remark-emoji';
@@ -17,11 +17,7 @@ export const legal = defineCollections({
   postprocess: {
     includeProcessedMarkdown: true,
   },
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    icon: z.string().optional(),
-    full: z.boolean().optional(),
+  schema: frontmatterSchema.extend({
     published: z.coerce.date(),
   }),
 });
@@ -29,14 +25,8 @@ export const legal = defineCollections({
 export const docs = defineDocs({
   dir: 'content/docs',
   docs: {
-    postprocess: {
-      includeProcessedMarkdown: true,
-    },
-    schema: z.object({
-      title: z.string(),
-      description: z.string().optional(),
-      icon: z.string().optional(),
-      full: z.boolean().optional(),
+    postprocess: { includeProcessedMarkdown: true },
+    schema: frontmatterSchema.extend({
       keywords: z.string().array().optional(),
       draft: z.boolean().default(false),
     }),

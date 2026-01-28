@@ -1,10 +1,9 @@
 import type { MDXComponents, MDXProps } from 'mdx/types';
 import type * as React from 'react';
 import { createRelativeLink, defaultMdxComponents } from '@/components/docs';
-import { Mermaid } from '@/components/mdx/mermaid';
 import type { LoaderConfig, LoaderOutput, Page } from '@/lib/fumadocs';
-
 import { cn } from '@/lib/utils';
+import { Mermaid } from './mermaid';
 
 type FumadocsExtras<C extends LoaderConfig> = {
   /** The source loader used to load the page */
@@ -38,16 +37,6 @@ export function Markdown<C extends LoaderConfig>({ body: Mdx, className, compone
 function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
-    // a: ({ href = '', ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) => {
-    //   if (href.startsWith('/') || href.startsWith('#')) {
-    //     return <Link href={href as Route} {...props} />;
-    //   }
-
-    //   return <a href={href} target='_blank' rel='noopener noreferrer' {...props} />;
-    // },
-    // img: ({ className, alt, ...props }: ImageProps) => {
-    //   return <Image className={cn('rounded-md border', className)} alt={alt} {...props} />;
-    // },
     Mermaid,
     ...components,
   };
