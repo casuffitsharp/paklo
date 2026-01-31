@@ -256,15 +256,13 @@ export function CreateOrganizationPage() {
                   <FieldDescription>This will be used in your organization URL</FieldDescription>
                 </Field>
 
-                <Field>
-                  <div className='flex justify-between pt-4'>
-                    <Button variant='outline' onClick={() => router.back()}>
-                      Cancel
-                    </Button>
-                    <Button onClick={() => setCurrentStep(2)} disabled={!canProceedStep1}>
-                      Continue
-                    </Button>
-                  </div>
+                <Field orientation='horizontal' className='justify-between'>
+                  <Button variant='outline' onClick={() => router.back()}>
+                    Cancel
+                  </Button>
+                  <Button onClick={() => setCurrentStep(2)} disabled={!canProceedStep1}>
+                    Continue
+                  </Button>
                 </Field>
               </FieldGroup>
             </FieldSet>
@@ -421,15 +419,13 @@ export function CreateOrganizationPage() {
                   </Button>
                 </Field>
 
-                <Field>
-                  <div className='flex justify-between pt-4'>
-                    <Button variant='outline' onClick={() => setCurrentStep(1)}>
-                      Back
-                    </Button>
-                    <Button onClick={() => setCurrentStep(3)} disabled={!canProceedStep2}>
-                      Continue
-                    </Button>
-                  </div>
+                <Field orientation='horizontal' className='justify-between'>
+                  <Button variant='outline' onClick={() => setCurrentStep(1)}>
+                    Back
+                  </Button>
+                  <Button onClick={() => setCurrentStep(3)} disabled={!canProceedStep2}>
+                    Continue
+                  </Button>
                 </Field>
               </FieldGroup>
             </FieldSet>
@@ -455,22 +451,20 @@ export function CreateOrganizationPage() {
                   </Alert>
                 )}
 
-                <Field>
-                  <div className='flex justify-between pt-4'>
-                    <Button variant='outline' onClick={() => setCurrentStep(2)}>
-                      Back
-                    </Button>
-                    <Button onClick={createOrganization} disabled={creating}>
-                      {creating ? (
-                        <>
-                          <Spinner />
-                          Creating Organization
-                        </>
-                      ) : (
-                        'Continue to Billing'
-                      )}
-                    </Button>
-                  </div>
+                <Field orientation='horizontal' className='justify-between'>
+                  <Button variant='outline' onClick={() => setCurrentStep(2)}>
+                    Back
+                  </Button>
+                  <Button onClick={createOrganization} disabled={creating}>
+                    {creating ? (
+                      <>
+                        <Spinner />
+                        Creating Organization
+                      </>
+                    ) : (
+                      'Continue to Billing'
+                    )}
+                  </Button>
                 </Field>
               </FieldGroup>
             </FieldSet>

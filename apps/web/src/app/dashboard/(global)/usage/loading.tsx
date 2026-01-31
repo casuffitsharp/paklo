@@ -9,18 +9,18 @@ export default function Loading() {
           {/* Header Skeleton */}
           <div className='flex items-center justify-between'>
             <div className='space-y-2'>
-              <Skeleton className='h-9 w-[280px]' />
-              <Skeleton className='h-4 w-[380px]' />
+              <Skeleton className='h-9 w-70' />
+              <Skeleton className='h-4 w-95' />
             </div>
           </div>
 
           {/* Filters Skeleton */}
           <Card className='p-4'>
             <div className='flex flex-wrap gap-3'>
-              <Skeleton className='h-10 w-[180px]' />
-              <Skeleton className='h-10 w-[280px]' />
-              <Skeleton className='h-10 w-[200px]' />
-              <Skeleton className='h-10 w-[140px]' />
+              <Skeleton className='h-10 w-45' />
+              <Skeleton className='h-10 w-70' />
+              <Skeleton className='h-10 w-50' />
+              <Skeleton className='h-10 w-35' />
             </div>
           </Card>
 
@@ -47,7 +47,7 @@ export default function Loading() {
                   <Skeleton className='h-6 w-32' />
                   <Skeleton className='h-4 w-48' />
                 </div>
-                <Skeleton className='h-[300px] w-full' />
+                <Skeleton className='h-75 w-full' />
               </div>
             </Card>
             <Card className='p-6'>
@@ -56,7 +56,7 @@ export default function Loading() {
                   <Skeleton className='h-6 w-40' />
                   <Skeleton className='h-4 w-56' />
                 </div>
-                <Skeleton className='h-[300px] w-full' />
+                <Skeleton className='h-75 w-full' />
               </div>
             </Card>
           </div>

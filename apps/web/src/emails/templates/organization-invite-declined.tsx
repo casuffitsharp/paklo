@@ -17,7 +17,7 @@ export function OrganizationInviteDeclined({
       <Tailwind>
         <Body className='mx-auto my-auto bg-white px-2 font-sans'>
           <Preview>Invitation to {organization} was declined</Preview>
-          <Container className='mx-auto my-10 max-w-[465px] p-5'>
+          <Container className='mx-auto my-10 max-w-116.25 p-5'>
             <Section>
               <Row>
                 <Text className='mb-4 font-bold text-[24px] text-black'>Invitation Declined</Text>
@@ -33,7 +33,7 @@ export function OrganizationInviteDeclined({
                 </Text>
               </Row>
             </Section>
-            <Hr className='mx-0 my-[26px] w-full border border-[#eaeaea] border-solid' />
+            <Hr className='mx-0 my-6.5 w-full border border-[#eaeaea] border-solid' />
             <Text className='text-[#666666] text-[12px] leading-6'>
               This email was intended for <span className='text-black'>{recipient}</span>. If you were not expecting
               this email, you can ignore it. If you are concerned about your account's safety, please reply to this
