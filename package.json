@@ -48,7 +48,8 @@
   "packageManager": "pnpm@10.27.0",
   "pnpm": {
     "overrides": {
-      "@prisma/dev>hono": ">=4.11.8"
+      "@prisma/dev>hono": ">=4.11.8",
+      "@workflow/web>next": ">=16.1.6"
     }
   }
 }
