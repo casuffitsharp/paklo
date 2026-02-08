@@ -24,8 +24,19 @@ const adminUserIds = process.env.BETTER_AUTH_ADMIN_USER_IDS?.split(',') ?? [];
 const adminEmails = process.env.BETTER_AUTH_ADMIN_EMAILS?.split(',') ?? [];
 
 export const auth = betterAuth({
+  baseURL: config.siteUrl,
   database: prismaAdapter(prismaClient, { provider: 'postgresql' }),
   appName: app.name,
+  trustedOrigins: [
+    // local
+    'http://localhost:3000',
+    // Main domain and its subdomains (e.g. for review apps)
+    'https://paklo.app',
+    'https://*.paklo.app',
+    // Vercel (main and preview deployments)
+    'https://paklo.vercel.app',
+    'https://paklo-*-mburumaxwell.vercel.app', // e.g. https://paklo-git-dependabot-npmandyarnfumadocs-1c-a81713-mburumaxwell.vercel.app/
+  ],
   advanced: {
     database: {
       generateId: ({ model, size }) =>
