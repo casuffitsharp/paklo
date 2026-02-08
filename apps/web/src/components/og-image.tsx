@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 import { DefaultImage } from '@/components/docs';
 
-// this relies on fumadocs-ui/og's DefaultImage component
+// this relies on @fumadocs/base-ui/og's DefaultImage component
 // https://github.com/fuma-nama/fumadocs/blob/58a466369cd85884957f89db280dd0fb5d1fa13d/packages/ui/src/og/next.tsx
 
 type OpenGraphImageProps = {

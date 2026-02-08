@@ -3,8 +3,8 @@
 @import 'shadcn/tailwind.css';
 
 /* see https://fumadocs.dev/docs/ui/theme */
-@import 'fumadocs-ui/css/shadcn.css';
-@import 'fumadocs-ui/css/preset.css';
+@import '@fumadocs/base-ui/css/shadcn.css';
+@import '@fumadocs/base-ui/css/preset.css';
 
 @custom-variant dark (&:is(.dark *));
 
